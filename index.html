@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,11 @@
     <header>
         <div class="container">
             <h1>Shocking Electric</h1>
-            <nav>
+            <!-- Menu Toggle Button for Mobile -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                &#9776; <!-- This represents the hamburger icon -->
+            </button>
+            <nav id="navbar">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -85,12 +88,15 @@
             </form>
         </div>
     </section>
-
+    
     <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Shocking Electric. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Include JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
