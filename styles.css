@@ -30,9 +30,10 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em; /* Reduced font size */
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -62,11 +63,14 @@ nav ul li a {
     color: #fff;
     font-size: 2em;
     cursor: pointer;
+    position: absolute;
+    top: 15px; /* Adjusted position to avoid overlap */
+    right: 30px; /* Adjusted position to avoid overlap */
 }
 
 /* Hero Section */
 .hero {
-    position: relative; /* Added to position overlay correctly */
+    position: relative;
     background: url('electrician.jpg') no-repeat center center/cover;
     color: #fff;
     height: 400px;
@@ -92,20 +96,19 @@ nav ul li a {
 
 /* Text styles */
 .hero h2, .hero p, .cta-btn {
-    z-index: 2; /* Ensures text is above overlay */
-    position: relative; /* Required to position text correctly */
+    z-index: 2;
+    position: relative;
 }
 
-/* Further text enhancements */
 .hero h2 {
     font-size: 2.5em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Call-to-action button */
@@ -205,9 +208,8 @@ footer {
     /* Display hamburger button */
     .menu-toggle {
         display: block;
-        position: absolute;
-        top: 20px;
-        right: 30px;
+        top: 10px; /* Adjusted top position */
+        right: 15px; /* Adjusted right position */
     }
 
     /* Hide the navigation menu by default */
@@ -271,5 +273,13 @@ footer {
     .cta-btn {
         padding: 8px 15px;
         font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 1.7em; /* Further reduce font size on smaller screens */
+    }
+
+    .menu-toggle {
+        font-size: 1.5em; /* Reduce size of hamburger icon */
     }
 }
