@@ -25,6 +25,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -32,12 +33,18 @@ header h1 {
     font-size: 2.5em;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -45,6 +52,16 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
+}
+
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -162,21 +179,32 @@ footer {
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
-    /* Adjust the header and navigation for mobile */
-    header h1 {
-        font-size: 2em;
+    /* Display hamburger button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    /* Hide the navigation menu by default */
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: #333;
+        padding: 20px;
     }
 
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
-    /* Make hero section fit content on mobile */
-    .hero {
-        height: auto;
-        padding: 50px 20px;
-        background-size: cover;
+    /* Show menu when toggled */
+    nav.active {
+        display: flex;
     }
 
     .hero h2 {
