@@ -123,10 +123,9 @@ nav ul li a {
 
 /* Services Section */
 #services {
-    padding: 50px 0; /* Match padding of the about section */
+    padding: 50px 0; /* Original padding */
     background: #f4f4f4;
     text-align: center;
-    margin-bottom: 50px; /* Additional margin for spacing */
 }
 
 .service-grid {
@@ -149,7 +148,7 @@ nav ul li a {
 
 /* About Section */
 .about {
-    padding: 50px 0; /* Keep the same padding as services */
+    padding: 50px 0; /* Same padding as before */
     background: #333;
     color: #fff;
     text-align: center;
