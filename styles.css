@@ -66,6 +66,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+    position: relative; /* Added to position overlay correctly */
     background: url('electrician.jpg') no-repeat center center/cover;
     color: #fff;
     height: 400px;
@@ -77,15 +78,37 @@ nav ul li a {
     padding: 20px;
 }
 
+/* Add a semi-transparent overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+}
+
+/* Text styles */
+.hero h2, .hero p, .cta-btn {
+    z-index: 2; /* Ensures text is above overlay */
+    position: relative; /* Required to position text correctly */
+}
+
+/* Further text enhancements */
 .hero h2 {
     font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
 }
 
 .hero p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
 }
 
+/* Call-to-action button */
 .cta-btn {
     display: inline-block;
     padding: 10px 20px;
